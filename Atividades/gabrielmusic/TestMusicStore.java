@@ -4,13 +4,13 @@ import java.io.PrintStream;
 
 public class TestMusicStore {
     public static void main(String[] args) {
-        //LabVi : A Classe MusicStore
         MusicStore music = new MusicStore();
         PrintStream show = System.out;
+        music.setOwner("Gabriel");
         music.displayHoursOfOperation(show);
+        //LabVi : A Classe MusicStore
         //LabVII: MusicStore com um Dono
-        String owner = "sem dono";
-        music.setOwner(owner,show);
+        //LabVIII: MusicStore com checagem de horário
 
     }
 }
