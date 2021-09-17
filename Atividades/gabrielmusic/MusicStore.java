@@ -1,10 +1,12 @@
 package co.gabrielmusic;
 
+import java.util.Scanner;
 import java.io.PrintStream;
 import java.util.Calendar;
 
 public class MusicStore {
 
+    private Scanner texto = new Scanner(System.in);
     private String owner;
     private int openTime;
     private int closeTime;
@@ -16,9 +18,13 @@ public class MusicStore {
     }
 
     void displayHoursOfOperation(PrintStream show){
-        show.println("\nPeríodo: \n" +"Diariamente das 9:00 - 22:00");
+        show.println("\nDigite o Horário de abertura : ");
+        this.openTime = texto.nextInt();
+        show.println("\nDigite o Horário de fechamento : ");
+        this.closeTime = texto.nextInt();
         show.println("\n" + this.owner + ", Proprietário");
         show.println(this.openCloseMessage());
+        show.println(toString(owner,openTime,closeTime));
     }
 
     private String openCloseMessage(){
@@ -61,4 +67,8 @@ public class MusicStore {
         return result;
     }
 
+    private String toString(String owner, int openTime , int closeTime){
+        String concatenacao = "[ Dono , = " + this.owner + ", Abre = " + this.openTime + ", Fecha = " + this.closeTime + "]";
+        return concatenacao;
+    }
 }
