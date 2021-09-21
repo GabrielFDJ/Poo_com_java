@@ -1,4 +1,4 @@
-package co.gabrielmusic;
+package gabrielmusic;
 
 import java.util.Scanner;
 import java.io.PrintStream;

@@ -1,4 +1,4 @@
-package co.gabrielmusic;
+package gabrielmusic;
 
 import java.io.PrintStream;
 
@@ -11,6 +11,7 @@ public class TestMusicStore {
         //LabVi : A Classe MusicStore
         //LabVII: MusicStore com um Dono
         //LabVIII: MusicStore com checagem de horário
-
+        //LabIX: MusicStore com leitura de dados no teclado e concatecação de strings
+        //Lab
     }
 }
