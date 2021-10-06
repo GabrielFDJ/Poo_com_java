@@ -21,60 +21,47 @@ public class Jogo {
 	}
 	
 	public String verifica_status(){		
-		System.out.println(this.status);
-		for(int i=0; i<9; i++) {			
-			System.out.println(tabuleiro[i]);
-		}
-		
 		if(this.status == 1 && tabuleiro[0] != "z" && tabuleiro[0].equals(tabuleiro[1]) && tabuleiro[0].equals(tabuleiro[2])) {
 			this.status = 0;			
-			Vencedor = test_vencedor(tabuleiro[0]);
-			System.out.println("entrou - " + contador);
+			Vencedor = test_vencedor(tabuleiro[0]);			
 		}
 				
 		else if(this.status == 1 && tabuleiro[0] != "z" && tabuleiro[0].equals(tabuleiro[3]) && tabuleiro[0].equals(tabuleiro[6])) {
 			this.status = 0;			
-			Vencedor = test_vencedor(tabuleiro[0]);
-			System.out.println("entrou - " + contador);
+			Vencedor = test_vencedor(tabuleiro[0]);			
 		} 
 		
 		else if(this.status == 1 && tabuleiro[0] != "z" && tabuleiro[0].equals(tabuleiro[4]) && tabuleiro[0].equals(tabuleiro[8])) {
 			this.status = 0;			
-			Vencedor = test_vencedor(tabuleiro[0]);
-			System.out.println("entrou - " + contador);
+			Vencedor = test_vencedor(tabuleiro[0]);			
 		} 
 		
 		else if(this.status == 1 && tabuleiro[1] != "z" && tabuleiro[1].equals(tabuleiro[4]) && tabuleiro[1].equals(tabuleiro[7])) {
 			this.status = 0;			
-			Vencedor = test_vencedor(tabuleiro[1]);
-			System.out.println("entrou - " + contador);
+			Vencedor = test_vencedor(tabuleiro[1]);			
 		} 
 			
 		else if(this.status == 1 && tabuleiro[2] != "z" && tabuleiro[2].equals(tabuleiro[4]) && tabuleiro[2].equals(tabuleiro[6])) {
 			this.status = 0;			
 			Vencedor = test_vencedor(tabuleiro[2]);
-			System.out.println("entrou - " + contador);
 		} 
 		
 		else if(this.status == 1 && tabuleiro[2] != "z" && tabuleiro[2].equals(tabuleiro[5]) && tabuleiro[2].equals(tabuleiro[8])) {
 			this.status = 0;			
-			Vencedor = test_vencedor(tabuleiro[2]);
-			System.out.println("entrou - " + contador);
+			Vencedor = test_vencedor(tabuleiro[2]);			
 		}
 		
 		else if(this.status == 1 && tabuleiro[3] != "z" && tabuleiro[3].equals(tabuleiro[4]) && tabuleiro[3].equals(tabuleiro[5])) {
 			this.status = 0;			
-			Vencedor = test_vencedor(tabuleiro[3]);
-			System.out.println("entrou - " + contador);
+			Vencedor = test_vencedor(tabuleiro[3]);			
 		}
 		
 		else if(this.status == 1 && tabuleiro[6] != "z" && tabuleiro[6].equals(tabuleiro[7]) && tabuleiro[6].equals(tabuleiro[8])) {
 			this.status = 0;			
-			Vencedor = test_vencedor(tabuleiro[6]);
-			System.out.println("entrou - " + contador);
+			Vencedor = test_vencedor(tabuleiro[6]);			
 		}
 		
-		if(this.status == 1 && contador == 9)
+		else if(this.status == 1 && contador == 9)
 			Vencedor = "Empate";
 		return Vencedor;
 	}
@@ -96,9 +83,7 @@ public class Jogo {
 
 	public void setStatus(int status) {
 		this.status = status;
-	}	
-	
-	
+	}		
 	
 	
 }
