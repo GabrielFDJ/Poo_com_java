@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 import java.awt.Font;
+import javax.swing.JButton;
 
 public class interface_jogoda_velha {
 
@@ -54,27 +55,28 @@ public class interface_jogoda_velha {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		jogo = new Jogo();
-		
+		jogo.inicializar_tablueiro();		
 		
 		JComboBox comboBox0 = new JComboBox();
 		comboBox0.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {				
-				int indice = comboBox0.getSelectedIndex();
-				if( indice != 0 ) {
-					comboBox0.setEnabled(false);	
-					
-					String escolha;
-					if(indice == 1) {
-						escolha = "X";
-					}else {
-						escolha = "0";
+			public void actionPerformed(ActionEvent e) {			
+					int indice = comboBox0.getSelectedIndex();
+					if( indice != 0 ) {
+						comboBox0.setEnabled(false);	
+						
+						String escolha;
+						if(indice == 1) {
+							escolha = "X";
+						}else {
+							escolha = "0";
+						}
+						jogo.preenche_tabuleiro(escolha, 0);
+						String result = jogo.verifica_status();
+						txtResultado.setText(result);						
 					}
-					jogo.preenche_tabuleiro(escolha, 0);
-					String result = jogo.verifica_status();
-					txtResultado.setText(result);
 				}
 				
-			}
+			
 		});
 		
 		comboBox0.setModel(new DefaultComboBoxModel(new String[] {"", "X", "0"}));
@@ -84,14 +86,9 @@ public class interface_jogoda_velha {
 		JComboBox comboBox1 = new JComboBox();
 		comboBox1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int entra = 1;
-				String result = jogo.verifica_status();
-				if(result != " ") {
-					comboBox1.setEnabled(false);		
-					entra = 0;
-				}
+				
 				int indice = comboBox1.getSelectedIndex();
-				if( indice != 0 && entra == 1){
+				if( indice != 0 ){
 					comboBox1.setEnabled(false);
 					
 					String escolha;
@@ -102,7 +99,7 @@ public class interface_jogoda_velha {
 					}
 					
 					jogo.preenche_tabuleiro(escolha, 1);
-					result = jogo.verifica_status();
+					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					
 				}
@@ -115,14 +112,9 @@ public class interface_jogoda_velha {
 		JComboBox comboBox2 = new JComboBox();
 		comboBox2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int entra = 1; 
-				String result = jogo.verifica_status();
-				if(result != " ") {
-					comboBox2.setEnabled(false);
-					entra = 0;
-				}
+				
 				int indice = comboBox2.getSelectedIndex();
-				if( indice != 0 && entra == 1) {
+				if( indice != 0) {
 					comboBox2.setEnabled(false);
 					
 					String escolha;
@@ -133,7 +125,7 @@ public class interface_jogoda_velha {
 					}
 					
 					jogo.preenche_tabuleiro(escolha, 2);
-					result = jogo.verifica_status();
+					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					
 				}
@@ -145,15 +137,10 @@ public class interface_jogoda_velha {
 		
 		JComboBox comboBox3 = new JComboBox();
 		comboBox3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {	
-				int entra = 1;
-				String result = jogo.verifica_status();
-				if(result != " ") {
-					comboBox3.setEnabled(false);	
-					entra = 0;
-				}
+			public void actionPerformed(ActionEvent e) {				
+						
 				int indice = comboBox3.getSelectedIndex();
-				if( indice != 0 && entra == 1){
+				if( indice != 0){
 					comboBox3.setEnabled(false);
 					
 					String escolha;
@@ -164,7 +151,7 @@ public class interface_jogoda_velha {
 					}
 					
 					jogo.preenche_tabuleiro(escolha, 3);
-					result = jogo.verifica_status();
+					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					
 				}
@@ -177,14 +164,9 @@ public class interface_jogoda_velha {
 		JComboBox comboBox4 = new JComboBox();
 		comboBox4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int entra = 1;
-				String result = jogo.verifica_status();
-				if(result != " ") {
-					comboBox4.setEnabled(false);		
-					entra = 0;
-				}
+				
 				int indice = comboBox4.getSelectedIndex();
-				if( indice != 0 && entra == 1){
+				if( indice != 0){
 					comboBox4.setEnabled(false);
 					
 					String escolha;
@@ -195,7 +177,7 @@ public class interface_jogoda_velha {
 					}
 					
 					jogo.preenche_tabuleiro(escolha, 4);
-					result = jogo.verifica_status();
+					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					
 				}
@@ -208,14 +190,9 @@ public class interface_jogoda_velha {
 		JComboBox comboBox5 = new JComboBox();
 		comboBox5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int entra = 1;
-				String result = jogo.verifica_status();
-				if(result != " ") {
-					comboBox5.setEnabled(false);		
-					entra = 0;
-				}
+				
 				int indice = comboBox5.getSelectedIndex();
-				if( indice != 0 && entra == 1){
+				if( indice != 0 ){
 					comboBox5.setEnabled(false);
 					
 					String escolha;
@@ -226,7 +203,7 @@ public class interface_jogoda_velha {
 					}
 					
 					jogo.preenche_tabuleiro(escolha, 5);
-					result = jogo.verifica_status();
+					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					
 				}
@@ -239,14 +216,9 @@ public class interface_jogoda_velha {
 		JComboBox comboBox6 = new JComboBox();
 		comboBox6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int entra = 1;
-				String result = jogo.verifica_status();
-				if(result != " ") {
-					comboBox6.setEnabled(false);		
-					entra = 0;
-				}
-				int indice = comboBox4.getSelectedIndex();
-				if( indice != 0 && entra == 1){
+				
+				int indice = comboBox6.getSelectedIndex();
+				if( indice != 0 ){
 					comboBox6.setEnabled(false);
 					
 					String escolha;
@@ -257,7 +229,7 @@ public class interface_jogoda_velha {
 					}
 					
 					jogo.preenche_tabuleiro(escolha, 6);
-					result = jogo.verifica_status();
+					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					
 				}
@@ -270,14 +242,9 @@ public class interface_jogoda_velha {
 		JComboBox comboBox7 = new JComboBox();
 		comboBox7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
-				int entra = 1;
-				String result = jogo.verifica_status();
-				if(result != " ") {
-					comboBox7.setEnabled(false);		
-					entra = 0;
-				}
-				int indice = comboBox4.getSelectedIndex();
-				if( indice != 0 && entra == 1){
+				
+				int indice = comboBox7.getSelectedIndex();
+				if( indice != 0 ){
 					comboBox7.setEnabled(false);
 					
 					String escolha;
@@ -288,7 +255,7 @@ public class interface_jogoda_velha {
 					}
 					
 					jogo.preenche_tabuleiro(escolha, 7);
-					result = jogo.verifica_status();
+					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					
 				}
@@ -302,14 +269,10 @@ public class interface_jogoda_velha {
 		comboBox8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				int entra = 1;
-				String result = jogo.verifica_status();
-				if(result != " ") {
-					comboBox8.setEnabled(false);		
-					entra = 0;
-				}
-				int indice = comboBox4.getSelectedIndex();
-				if( indice != 0 && entra == 1){
+				
+				int indice = comboBox8.getSelectedIndex();
+				System.out.println(indice);
+				if( indice != 0){
 					comboBox8.setEnabled(false);
 					
 					String escolha;
@@ -320,7 +283,7 @@ public class interface_jogoda_velha {
 					}
 					
 					jogo.preenche_tabuleiro(escolha, 8);
-					result = jogo.verifica_status();
+					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					
 				}
@@ -341,8 +304,8 @@ public class interface_jogoda_velha {
 		frame.getContentPane().add(txtResultado);
 		txtResultado.setColumns(10);
 		
+				
+		
 		
 	}
-	
-	
 }
