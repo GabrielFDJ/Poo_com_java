@@ -16,6 +16,9 @@ import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
+import javax.swing.JList;
+import javax.swing.AbstractListModel;
 
 public class interface_jogoda_velha {
 
@@ -41,6 +44,8 @@ public class interface_jogoda_velha {
 	/**
 	 * Create the application.
 	 */
+	
+	
 	public interface_jogoda_velha() {
 		initialize();
 	}
@@ -55,7 +60,9 @@ public class interface_jogoda_velha {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		jogo = new Jogo();
-		jogo.inicializar_tablueiro();		
+		jogo.inicializar_tablueiro();
+		
+		JButton btnRecomeçar = new JButton("Jogar Novamente");
 		
 		JComboBox comboBox0 = new JComboBox();
 		comboBox0.addActionListener(new ActionListener() {
@@ -72,7 +79,10 @@ public class interface_jogoda_velha {
 						}
 						jogo.preenche_tabuleiro(escolha, 0);
 						String result = jogo.verifica_status();
-						txtResultado.setText(result);						
+						txtResultado.setText(result);
+						if(jogo.getStatus() == 0) {
+							btnRecomeçar.setEnabled(true);								
+						}
 					}
 				}
 				
@@ -101,6 +111,9 @@ public class interface_jogoda_velha {
 					jogo.preenche_tabuleiro(escolha, 1);
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
+					if(jogo.getStatus() == 0) {
+						btnRecomeçar.setEnabled(true);								
+					}
 					
 				}
 			}
@@ -127,6 +140,9 @@ public class interface_jogoda_velha {
 					jogo.preenche_tabuleiro(escolha, 2);
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
+					if(jogo.getStatus() == 0) {
+						btnRecomeçar.setEnabled(true);								
+					}
 					
 				}
 			}
@@ -153,7 +169,9 @@ public class interface_jogoda_velha {
 					jogo.preenche_tabuleiro(escolha, 3);
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
-					
+					if(jogo.getStatus() == 0) {
+						btnRecomeçar.setEnabled(true);								
+					}
 				}
 			}
 		});
@@ -179,6 +197,9 @@ public class interface_jogoda_velha {
 					jogo.preenche_tabuleiro(escolha, 4);
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
+					if(jogo.getStatus() == 0) {
+						btnRecomeçar.setEnabled(true);								
+					}
 					
 				}
 			}
@@ -205,6 +226,9 @@ public class interface_jogoda_velha {
 					jogo.preenche_tabuleiro(escolha, 5);
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
+					if(jogo.getStatus() == 0) {
+						btnRecomeçar.setEnabled(true);								
+					}
 					
 				}
 			}
@@ -231,6 +255,9 @@ public class interface_jogoda_velha {
 					jogo.preenche_tabuleiro(escolha, 6);
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
+					if(jogo.getStatus() == 0) {
+						btnRecomeçar.setEnabled(true);								
+					}
 					
 				}
 			}
@@ -257,6 +284,9 @@ public class interface_jogoda_velha {
 					jogo.preenche_tabuleiro(escolha, 7);
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
+					if(jogo.getStatus() == 0) {
+						btnRecomeçar.setEnabled(true);								
+					}
 					
 				}
 			}
@@ -285,7 +315,9 @@ public class interface_jogoda_velha {
 					jogo.preenche_tabuleiro(escolha, 8);
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
-					
+					if(jogo.getStatus() == 0) {
+						btnRecomeçar.setEnabled(true);								
+					}
 				}
 			}
 		});
@@ -304,8 +336,42 @@ public class interface_jogoda_velha {
 		frame.getContentPane().add(txtResultado);
 		txtResultado.setColumns(10);
 		
+		
+		btnRecomeçar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				jogo.inicializar_tablueiro();				
+				jogo.setStatus(1);
+				jogo.setVencedor(" ");
+				jogo.setContador(0);
+				txtResultado.setText("");
+				comboBox0.setModel(new DefaultComboBoxModel(new String[] {"", "X", "0"}));
+				comboBox0.setEnabled(true);
+				comboBox1.setModel(new DefaultComboBoxModel(new String[] {"", "X", "0"}));
+				comboBox1.setEnabled(true);
+				comboBox2.setModel(new DefaultComboBoxModel(new String[] {"", "X", "0"}));
+				comboBox2.setEnabled(true);
+				comboBox3.setModel(new DefaultComboBoxModel(new String[] {"", "X", "0"}));
+				comboBox3.setEnabled(true);
+				comboBox4.setModel(new DefaultComboBoxModel(new String[] {"", "X", "0"}));
+				comboBox4.setEnabled(true);
+				comboBox5.setModel(new DefaultComboBoxModel(new String[] {"", "X", "0"}));
+				comboBox5.setEnabled(true);
+				comboBox6.setModel(new DefaultComboBoxModel(new String[] {"", "X", "0"}));
+				comboBox6.setEnabled(true);
+				comboBox7.setModel(new DefaultComboBoxModel(new String[] {"", "X", "0"}));
+				comboBox7.setEnabled(true);
+				comboBox8.setModel(new DefaultComboBoxModel(new String[] {"", "X", "0"}));
+				comboBox8.setEnabled(true);
+				
+			}
+		});
+		
+		btnRecomeçar.setEnabled(false);
+		btnRecomeçar.setBounds(273, 195, 151, 38);
+		frame.getContentPane().add(btnRecomeçar);
 				
 		
-		
 	}
+	
+	
 }
