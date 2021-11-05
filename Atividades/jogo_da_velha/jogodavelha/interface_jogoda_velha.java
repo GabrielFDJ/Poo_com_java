@@ -62,7 +62,8 @@ public class interface_jogoda_velha {
 		jogo = new Jogo();
 		jogo.inicializar_tablueiro();
 		
-		JButton btnRecomeçar = new JButton("Jogar Novamente");
+		
+		JButton btnRecomecar = new JButton("Jogar Novamente");
 		
 		JComboBox comboBox0 = new JComboBox();
 		comboBox0.addActionListener(new ActionListener() {
@@ -81,7 +82,7 @@ public class interface_jogoda_velha {
 						String result = jogo.verifica_status();
 						txtResultado.setText(result);
 						if(jogo.getStatus() == 0) {
-							btnRecomeçar.setEnabled(true);								
+							btnRecomecar.setEnabled(true);								
 						}
 					}
 				}
@@ -112,7 +113,7 @@ public class interface_jogoda_velha {
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					if(jogo.getStatus() == 0) {
-						btnRecomeçar.setEnabled(true);								
+						btnRecomecar.setEnabled(true);								
 					}
 					
 				}
@@ -141,7 +142,7 @@ public class interface_jogoda_velha {
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					if(jogo.getStatus() == 0) {
-						btnRecomeçar.setEnabled(true);								
+						btnRecomecar.setEnabled(true);								
 					}
 					
 				}
@@ -170,7 +171,7 @@ public class interface_jogoda_velha {
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					if(jogo.getStatus() == 0) {
-						btnRecomeçar.setEnabled(true);								
+						btnRecomecar.setEnabled(true);								
 					}
 				}
 			}
@@ -198,7 +199,7 @@ public class interface_jogoda_velha {
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					if(jogo.getStatus() == 0) {
-						btnRecomeçar.setEnabled(true);								
+						btnRecomecar.setEnabled(true);								
 					}
 					
 				}
@@ -227,7 +228,7 @@ public class interface_jogoda_velha {
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					if(jogo.getStatus() == 0) {
-						btnRecomeçar.setEnabled(true);								
+						btnRecomecar.setEnabled(true);								
 					}
 					
 				}
@@ -256,7 +257,7 @@ public class interface_jogoda_velha {
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					if(jogo.getStatus() == 0) {
-						btnRecomeçar.setEnabled(true);								
+						btnRecomecar.setEnabled(true);								
 					}
 					
 				}
@@ -285,7 +286,7 @@ public class interface_jogoda_velha {
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					if(jogo.getStatus() == 0) {
-						btnRecomeçar.setEnabled(true);								
+						btnRecomecar.setEnabled(true);								
 					}
 					
 				}
@@ -316,7 +317,7 @@ public class interface_jogoda_velha {
 					String result = jogo.verifica_status();
 					txtResultado.setText(result);
 					if(jogo.getStatus() == 0) {
-						btnRecomeçar.setEnabled(true);								
+						btnRecomecar.setEnabled(true);								
 					}
 				}
 			}
@@ -337,7 +338,7 @@ public class interface_jogoda_velha {
 		txtResultado.setColumns(10);
 		
 		
-		btnRecomeçar.addActionListener(new ActionListener() {
+		btnRecomecar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				jogo.inicializar_tablueiro();				
 				jogo.setStatus(1);
@@ -366,9 +367,9 @@ public class interface_jogoda_velha {
 			}
 		});
 		
-		btnRecomeçar.setEnabled(false);
-		btnRecomeçar.setBounds(273, 195, 151, 38);
-		frame.getContentPane().add(btnRecomeçar);
+		btnRecomecar.setEnabled(false);
+		btnRecomecar.setBounds(273, 195, 151, 38);
+		frame.getContentPane().add(btnRecomecar);
 				
 		
 	}
