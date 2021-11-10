@@ -10,7 +10,7 @@ public class ConversaoDeUnidadesDeArea {
 		double result_acre_milha = acre_milha(result_pes_acre);
 		
 		System.out.println("\nA area do campo em pes quadrados sao de : "+ result_metro_pes+" pe(s)");
-		System.out.println("A area do campo em centimetros quadrados sao de : "+ result_pes_centimetros+" centemetro(s)");
+		System.out.println("A area do campo em centimetros quadrados sao de : "+ result_pes_centimetros+" centimetro(s)");
 		System.out.println("A area do campo em acres quadrados sao de : "+ result_pes_acre+" acre(s)");
 		System.out.println("A area do campo em milhas quadrados sao de : "+ result_acre_milha+" milha(s)");
 		
